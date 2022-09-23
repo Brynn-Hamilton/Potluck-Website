@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "RSVP";
+}
+<div class="rsvpform">
+<h1>RSVP</h1>
+<hr />
+</div>
+
+<div class="container"> 
+  <form method="post" action="/home/registered">
+      <div class="row">
+          <div class="col-25">
+              <label for="fname">First Name</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="fname" name="firstname"/><br />
+          </div>
+      </div>
+
+        <div class="row">
+          <div class="col-25">
+              <label for="lname">Last Name</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="lname" name="lastname"  />@TempData["LastNameError"]<br />
+          </div>
+      </div>
+
+        <div class="row">
+          <div class="col-25">
+              <label for="emailadd">Email Address</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="emailadd" name="email" />@TempData["EmailError"]<br />
+          </div>
+      </div>
+
+        <div class="row">
+          <div class="col-25">
+              <label for="fname">Date Attending</label>
+          </div>
+          <div class="col-75">
+              <select name="date">
+            <option>9/26/2022 11:00:00 AM</option>
+            <option>9/26/2022 2:00:00 PM</option>
+            <option>9/28/2022 11:00:00 AM</option>
+            <option>9/28/2022 2:00:00 PM</option>
+        </select> <br />
+          </div>
+      </div>
+
+        <div class="row">
+          <div class="col-25">
+              <label for="guestadd">Guest Name</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="guestadd" name="guestname" /><br />
+          </div>
+      </div>
+      <input type="submit"/>    
+    </form>
+</div>
+  
+
+
+

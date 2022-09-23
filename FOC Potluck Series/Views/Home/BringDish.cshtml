@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "BringDish";
+}
+<div class="rsvpform">
+<h1>Bring A Dish</h1>
+</div>
+<hr />
+
+<div class="container">
+    <form method="post" action="/home/registereddish">
+           <div class="row">
+          <div class="col-25">
+              <label for="fullname">Name:</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="fullname" name="name"  /><br />
+          </div>
+      </div>
+         <div class="row">
+          <div class="col-25">
+              <label for="phonenum">Phone Number:</label>
+          </div>
+          <div class="col-75">
+              <input type="text" name="phonenumber" id="phonenum" placeholder="+1 (555) 555-5555"  />@TempData["PhoneError"]<br />
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-25">
+              <label for="dish">Dish Name:</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="dish" name="dishname" />@TempData["DishNameError"]<br />
+          </div>
+      </div>
+            <div class="row">
+          <div class="col-25">
+              <label for="dishdesc">Dish Description:</label>
+          </div>
+          <div class="col-75">
+              <input type="text" id="dishdesc" name="dishdescription" /><br />
+          </div>
+      </div>
+
+        <div class="row">
+          <div class="col-25">
+              <label for="fname">Category:</label>
+          </div>
+          <div class="col-75">
+              <select name="category">
+             <option>Appetizer</option>
+             <option>Salad</option>
+             <option>Main</option>
+             <option>Dessert</option>
+             <option>Beverage</option>
+        </select> <br />
+          </div>
+      </div>
+    <input type="submit"/>
+</form>
+</div>
+
+

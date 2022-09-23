@@ -1,0 +1,16 @@
+﻿@model Teammember;
+@{
+    ViewData["Title"] = "Registered";
+}
+<div class="home">
+    <h1>Registration Confirmation</h1>
+<hr />
+
+Thank you for registering for the potluck on @Model.Date @Model.FirstName @Model.LastName!
+<br />
+We look forward to seeing you @if(@Model.GuestName != null && @Model.GuestName.Length > 0) { <span> and @Model.GuestName</span>}!
+<br />
+We will contact you at @Model.Email with any updates.
+</div>
+
+
